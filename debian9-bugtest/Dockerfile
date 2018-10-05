@@ -29,8 +29,8 @@ RUN cd /home/bbs \
     && cp -r /home/bbs/maplebbs-itoc/bbs /home/
 
 WORKDIR /home/bbs/patch
-COPY ../file/patch-for64bit-Makefile /home/bbs/patch/patch-for64bit-Makefile
-COPY ../file/config_h /home/bbs/src/include/config.h
+COPY file/patch-for64bit-Makefile /home/bbs/patch/patch-for64bit-Makefile
+COPY file/config_h /home/bbs/src/include/config.h
 RUN patch -p1 -d /home/bbs/src </home/bbs/patch/patch-for64bit-Makefile
 RUN cd /home/bbs/src && make linux install clean
 
