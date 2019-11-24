@@ -12,9 +12,9 @@ RUN rpm --import http://mirror.centos.org/centos/6/os/x86_64/RPM-GPG-KEY-CentOS-
     && yum install -y \
                 gcc   \
                 make  \
-		patch \
-		glibc-devel \
-		glibc-devel.i686 \
+                patch \
+                glibc-devel \
+                glibc-devel.i686 \
                 libgcc.i686 \
                 libstdc++-devel.i686 \
                 ncurses-devel.i686
