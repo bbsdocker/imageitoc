@@ -6,9 +6,10 @@ RUN groupadd --gid 9999 bbs \
     && rm /etc/localtime \
     && ln -s /usr/share/zoneinfo/Asia/Taipei /etc/localtime
 
-RUN yum update -y    \
+RUN rpm --import http://mirror.centos.org/centos/6/os/x86_64/RPM-GPG-KEY-CentOS-6 \
+    && yum update -y    \
     && yum clean all \
-    && yum install --nogpgcheck -y \
+    && yum install -y \
                 gcc   \
                 make  \
 		patch \
